@@ -1,0 +1,124 @@
+/* ── Reset y base ───────────────────────────────────────────── */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Segoe UI', Arial, sans-serif;
+  background: #f0f2f5;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+}
+
+/* ── Contenedor principal ───────────────────────────────────── */
+.contenedor {
+  background: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  padding: 2.5rem 2rem;
+  width: 100%;
+  max-width: 480px;
+}
+
+h1 {
+  text-align: center;
+  color: #1a1a2e;
+  margin-bottom: 1.8rem;
+  font-size: 1.6rem;
+}
+
+/* ── Grupos de campo ────────────────────────────────────────── */
+.campo-grupo {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1.2rem;
+}
+
+label {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 0.4rem;
+}
+
+input {
+  padding: 0.6rem 0.8rem;
+  border: 2px solid #ccc;
+  border-radius: 6px;
+  font-size: 1rem;
+  transition: border-color 0.25s, box-shadow 0.25s;
+  outline: none;
+}
+
+input:focus {
+  border-color: #4a90e2;
+  box-shadow: 0 0 0 3px rgba(74, 144, 226, 0.2);
+}
+
+/* ── Estados válido / inválido ──────────────────────────────── */
+input.valido {
+  border-color: #2e7d32;
+  background: #f1f8f1;
+}
+
+input.invalido {
+  border-color: #c62828;
+  background: #fff5f5;
+}
+
+/* ── Mensajes de error ──────────────────────────────────────── */
+.msg-error {
+  font-size: 0.8rem;
+  color: #c62828;
+  margin-top: 0.3rem;
+  min-height: 1rem;
+  display: none;
+}
+
+.msg-error.visible {
+  display: block;
+}
+
+/* ── Botón ──────────────────────────────────────────────────── */
+button[type="submit"] {
+  width: 100%;
+  padding: 0.75rem;
+  background: #1a1a2e;
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 600;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  margin-top: 0.5rem;
+  transition: background 0.25s;
+}
+
+button[type="submit"]:hover {
+  background: #4a90e2;
+}
+
+/* ── Mensaje de éxito ───────────────────────────────────────── */
+#mensaje-exito {
+  margin-top: 1rem;
+  padding: 0.75rem;
+  border-radius: 6px;
+  text-align: center;
+  font-weight: 600;
+  color: #2e7d32;
+  background: #e8f5e9;
+  border: 1px solid #a5d6a7;
+}
+
+.oculto {
+  display: none;
+}
+
+.visible {
+  display: block;
+}
